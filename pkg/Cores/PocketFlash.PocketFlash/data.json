@@ -1,0 +1,67 @@
+{
+  "data": {
+    "magic": "APF_VER_1",
+    "data_slots": [
+      {
+        "name": "ROM backup",
+        "id": 1,
+        "required": false,
+        "deferload": true,
+        "parameters": 0,
+        "filename": "unused.gba",
+        "extensions": [
+          "gba"
+        ],
+        "address": "0x10000000"
+      },
+      {
+        "name": "ROM backup record",
+        "id": 2,
+        "required": false,
+        "deferload": true,
+        "parameters": 0,
+        "filename": "unused.pfr",
+        "extensions": [
+          "pfr"
+        ],
+        "address": "0x10000000"
+      },
+      {
+        "name": "Target ROM",
+        "id": 4,
+        "required": false,
+        "deferload": true,
+        "parameters": "0x9",
+        "extensions": [
+          "gba"
+        ],
+        "size_maximum": "0x2000000",
+        "address": "0x10000000"
+      },
+      {
+        "id": 5,
+        "name": "Save backup",
+        "required": false,
+        "deferload": true,
+        "parameters": 0,
+        "filename": "unused.sav",
+        "extensions": [
+          "sav"
+        ],
+        "address": "0x10000000"
+      },
+      {
+        "id": 6,
+        "name": "Save backup record",
+        "required": false,
+        "deferload": true,
+        "parameters": 0,
+        "filename": "unused.pfs",
+        "extensions": [
+          "pfs"
+        ],
+        "address": "0x10000000"
+      }
+    ]
+  }
+}

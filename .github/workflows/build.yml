@@ -1,0 +1,58 @@
+name: Build core
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Quartus utility core
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      CONTAINER_RUNTIME: podman
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install Podman
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends podman
+
+      - name: Prepare pinned Quartus toolchain
+        run: |
+          make setup
+          make toolchain
+
+      - name: Build core, check timing, and package
+        run: make rom
+
+      - name: Upload SD card package
+        uses: actions/upload-artifact@v7
+        with:
+          name: pocketflash-utility
+          path: dist/pocketflash-*-candidate.zip
+          if-no-files-found: error
+
+      - name: Upload build manifest and Quartus reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: quartus-reports
+          path: |
+            build/utility/build.json
+            build/utility/src/output_files/*.rpt
+            build/utility/src/output_files/*.summary
+          if-no-files-found: ignore

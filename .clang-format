@@ -1,0 +1,9 @@
+BasedOnStyle: LLVM
+Language: Verilog
+IndentWidth: 4
+ColumnLimit: 100
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+IndentCaseLabels: true
+VerilogBreakBetweenInstancePorts: true
+ReflowComments: false

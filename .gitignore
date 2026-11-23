@@ -1,0 +1,15 @@
+build/
+dist/
+src/db/
+src/incremental_db/
+src/output_files/
+src/*.qws
+__pycache__/
+.venv/
+.devenv/
+.direnv/
+devenv.local.nix
+devenv.local.yaml
+tmp/
+.DS_Store
+hardware-backups/
