@@ -1,0 +1,20 @@
+{
+  "source": "https://github.com/laamaa/openfpga-GBC",
+  "commit": "a56e8aefe1ba8cee0bd1a0f43bbd8169f8792656",
+  "original": "Analogue Pocket Framework, from open-fpga/core-template",
+  "sha256": {
+    "src/apf/common.v": "118954fe6623fe67dea38fdde553c6c40412a5f3737c3f83c7d9282c8e1bc374",
+    "src/apf/mf_ddio_bidir_12.v": "4cc80022f5bf2fff438319f11fa157f15e4e631489ff3165e4047f798af7a244",
+    "src/apf/apf.qip": "252741535c1572cb58c59ddcf245ad7bb707f7d1ed738bfef1d090b2729f4fb2",
+    "src/apf/io_bridge_peripheral.v": "fb9c13e0311ac6b01019898d0ca7786f370228380356fe618fc2b473f2add17d",
+    "src/apf/mf_ddio_bidir_12.ppf": "70e683493ee94bfd8ccd350fb2b8717a0116e6e0c30071abff32e148ae7c3b8f",
+    "src/apf/apf_constraints.sdc": "47fe6a363d5ba5fbd1de3663ba1a496e357272f69136a4aa7d1132a9098ecc44",
+    "src/apf/apf_top.v": "012285356982bd61d7aba0852d480408db0756f018f7bf529bdf974a66404878",
+    "src/apf/mf_ddio_bidir_12.qip": "3c2c94936197d8e943a7608df486c9e382e174835ed0591574b18a40f48b4cf6",
+    "src/apf/mf_datatable.v": "c8364fbc76851f14ead7005987d745bb8a0536fe5df9bbab014dce5796308c36",
+    "src/apf/build_id_gen.tcl": "6279533fec80081e3c91884e1cc5df853b2a716df0b573636147f3420aace996",
+    "src/apf/mf_datatable.qip": "93f8d6833ff4d9746c7e06918aff211201bb3e95bc423c6d8c8382a982640152",
+    "src/apf/build_id.mif": "fef22e8f0a3ccef688420f725514c20982b964db712c741303a1785c2216fd8a",
+    "src/apf/io_pad_controller.v": "70cda74af63d3baa53f87473e1d9e2d524ea305b299a3f832d6c1292771a305e"
+  }
+}

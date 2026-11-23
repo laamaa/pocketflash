@@ -1,0 +1,6 @@
+{
+  "reference": "docker.io/raetro/quartus@sha256:5572fce025806b778bb80b6d8c4350f5486ae78072892080897d80072d226a55",
+  "source_tag": "docker.io/raetro/quartus:pocket",
+  "architecture": "linux/amd64",
+  "quartus_version": "Quartus Prime Shell\nVersion 18.1.1 Build 646 04/11/2019 SJ Lite Edition\nCopyright (C) 2019  Intel Corporation. All rights reserved."
+}
