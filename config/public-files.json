@@ -106,6 +106,7 @@
     "tests/test_host.py",
     "tests/test_public_snapshot.py",
     "tests/test_save_tools.py",
+    "tests/test_simulate.py",
     "tests/test_utility_package.py",
     "tests/test_write_tools.py",
     "tools/build.py",

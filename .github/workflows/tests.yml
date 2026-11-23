@@ -32,4 +32,4 @@ jobs:
           sudo apt-get install --yes --no-install-recommends iverilog
 
       - name: Run test suite
-        run: make test
+        run: make test TEST_JOBS=4

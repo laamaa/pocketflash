@@ -29,11 +29,16 @@ Without Nix/devenv, install **Python 3.9+** and **GNU Make**, plus **Icarus Veri
 (`iverilog` and `vvp`) for `make test`. Use the same container runtime and run the
 `make` commands above directly, skipping `devenv shell`.
 
+Tests run sequentially by default. Use `make test TEST_JOBS=4` (or
+`make test-hdl TEST_JOBS=4`) to run up to four HDL benches concurrently. Each
+bench's output is grouped with its duration; failures and timeouts fail the suite.
+
 The installable ZIP is `dist/pocketflash-0.2.0-beta.1-candidate.zip`.
 
-GitHub Actions runs the test suite on pushes and pull requests, with manual runs
-also available from the Actions tab. The **Build core** workflow runs manually
-only, to avoid pulling the large Quartus image on every change. It uses the pinned
+GitHub Actions runs the test suite with four HDL workers on pushes and pull
+requests, with manual runs also available from the Actions tab. The **Build core**
+workflow runs manually only, to avoid pulling the large Quartus image on every
+change. It uses the pinned
 image, checks timing, and uploads the installable ZIP as the `pocketflash-utility`
 artifact. Quartus reports are available in `quartus-reports`, including after
 failed builds when reports exist.

@@ -1,5 +1,6 @@
 PYTHON ?= python3
 MODE ?= utility
+TEST_JOBS ?= 1
 PODMAN_CONNECTION ?=
 export PODMAN_CONNECTION
 
@@ -11,7 +12,7 @@ help:
 	@echo 'make package                  package the successful utility build'
 	@echo 'make test                     host checks and HDL simulation (Icarus required)'
 	@echo 'make test-host                host checks only'
-	@echo 'make test-hdl                 HDL simulation only'
+	@echo 'make test-hdl TEST_JOBS=4     HDL simulation with four parallel benches'
 setup:
 	$(PYTHON) tools/build.py setup
 setup-podman:
@@ -28,6 +29,6 @@ test: test-host test-hdl
 test-host:
 	$(PYTHON) -m unittest discover -s tests -p 'test_*.py' -v
 test-hdl:
-	$(PYTHON) tools/simulate.py
+	$(PYTHON) tools/simulate.py --jobs $(TEST_JOBS)
 clean:
 	$(PYTHON) tools/build.py clean
